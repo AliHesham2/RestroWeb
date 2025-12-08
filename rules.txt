@@ -161,11 +161,7 @@ project-root/
 │   └── storage.js                              # setToken/getToken/removeToken
 │
 ├── middleware.js                               # Protect admin routes, redirect if not authenticated
-├── public/                                     # Images / static assets
-│   └── admin-logo.png
-├── tailwind.config.js
-├── next.config.js
-└── package.json
+
 
 
 ✅ PHASE 2 — (FrontEnd :: Admin side )

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#137fec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+            },
+            fontFamily: {
+              "display": ["Work Sans", "Noto Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<div class="absolute inset-0 z-0">
+<img class="h-full w-full object-cover" data-alt="A warmly lit restaurant interior with patrons sitting at tables." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUrjbNi7ARGq8MHcZnwdZRD6w22g0QhOULh-mf5bL8q36i55b8nxHmVQYwYQIb3FpQrJ1eSTzvqBlyaYfiLpaB66T1Dnfn8pHw96gBwL6HIJQmpxvrO06T45EzgDsvtBKUEkgKGaLfZAmLmgMzfkPl447Qh3LnZGX6Rg69-djxWj-LM7wt-Kl4wBmMKdO8-N2QLA-fAD1xC1_UUfEKnZ0xMCuAL2eUk1Ofzu3G4LO6R3lHL9dn5o_fr5ZUPzKlToHyaTMkh2W7mXM"/>
+<div class="absolute inset-0 bg-black/60"></div>
+</div>
+<div class="relative z-10 flex h-full grow flex-col">
+<div class="flex flex-1 items-center justify-center p-4">
+<div class="flex w-full max-w-md flex-col items-center justify-center rounded-xl bg-background-light dark:bg-background-dark p-8 shadow-2xl sm:p-10">
+<div class="mb-8 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-5xl text-primary mb-2">
+                            restaurant_menu
+                        </span>
+<p class="text-3xl font-bold leading-tight tracking-tight text-[#0d141b] dark:text-slate-50">Admin Portal</p>
+<p class="mt-2 text-base font-normal text-[#4c739a] dark:text-slate-400">Welcome back, please log in to your account.</p>
+</div>
+<div class="w-full">
+<label class="flex flex-col">
+<p class="pb-2 text-base font-medium leading-normal text-[#0d141b] dark:text-slate-200">Username</p>
+<div class="relative flex w-full flex-1 items-stretch">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-2xl text-[#4c739a] dark:text-slate-400">
+                                    person
+                                </span>
+<input class="form-input flex h-14 w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-[#cfdbe7] dark:border-slate-700 bg-background-light dark:bg-slate-800 text-[#0d141b] dark:text-slate-50 placeholder:text-[#4c739a] dark:placeholder:text-slate-500 focus:border-primary focus:outline-0 focus:ring-0 pl-12 pr-4 text-base font-normal leading-normal" placeholder="Enter your username" value=""/>
+</div>
+</label>
+</div>
+<div class="mt-6 w-full">
+<label class="flex flex-col">
+<p class="pb-2 text-base font-medium leading-normal text-[#0d141b] dark:text-slate-200">Password</p>
+<div class="relative flex w-full flex-1 items-stretch">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-2xl text-[#4c739a] dark:text-slate-400">
+                                    lock
+                                </span>
+<input class="form-input flex h-14 w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-[#cfdbe7] dark:border-slate-700 bg-background-light dark:bg-slate-800 text-[#0d141b] dark:text-slate-50 placeholder:text-[#4c739a] dark:placeholder:text-slate-500 focus:border-primary focus:outline-0 focus:ring-0 pl-12 pr-12 text-base font-normal leading-normal" placeholder="Enter your password" type="password" value=""/>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 text-[#4c739a] dark:text-slate-400" data-icon="Eye" data-size="24px" data-weight="regular">
+<span class="material-symbols-outlined cursor-pointer">
+                                        visibility
+                                    </span>
+</div>
+</div>
+</label>
+</div>
+<div class="mt-8 w-full">
+<button class="flex h-12 min-w-[84px] w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-5 text-base font-bold leading-normal tracking-[0.015em] text-slate-50 transition-colors hover:bg-primary/90">
+<span class="truncate">Login</span>
+</button>
+</div>
+<div class="mt-6 w-full">
+<p class="text-center text-sm font-normal leading-normal text-[#4c739a] dark:text-slate-400">
+<a class="underline hover:text-primary dark:hover:text-primary/90" href="#">Forgot Password?</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>
