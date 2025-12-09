@@ -6,7 +6,6 @@ import LoginActions from './LoginActions';
 import useAdminAuth from '../hooks/useAdminAuth';
 import { validateEmail, validatePassword } from '../utils/authValidation';
 import { useAutoAnimateHook } from '@/components/animations/AutoAnimateHook';
-import { User, Lock, Eye, EyeOff } from 'lucide-react';
 
 const LoginForm = () => {
     const { login, status, errorMessage } = useAdminAuth();
@@ -37,7 +36,7 @@ const LoginForm = () => {
 
     return (
         <form onSubmit={handleSubmit} className="w-full" ref={parent}>
-            {/* Username Field - Matches lines 46-56 */}
+            {/* Username Field */}
             <div className="w-full">
                 <TextField
                     id="email"
@@ -48,12 +47,15 @@ const LoginForm = () => {
                     onChange={(e) => setEmail(e.target.value)}
                     error={errors.email}
                     disabled={status === 'loading' || status === 'success'}
-                    // Using Lucide 'User' to match 'person' icon. Size 24px = 1.5rem approx text-2xl
-                    startIcon={<User size={24} strokeWidth={1.5} />}
+                    startIcon={
+                        <span className="material-symbols-outlined text-2xl text-[#4c739a] dark:text-slate-400">
+                            person
+                        </span>
+                    }
                 />
             </div>
 
-            {/* Password Field - Matches lines 57-72 */}
+            {/* Password Field */}
             <div className="mt-6 w-full">
                 <TextField
                     id="password"
@@ -64,19 +66,18 @@ const LoginForm = () => {
                     onChange={(e) => setPassword(e.target.value)}
                     error={errors.password}
                     disabled={status === 'loading' || status === 'success'}
-                    // Using Lucide 'Lock' to match 'lock' icon
-                    startIcon={<Lock size={24} strokeWidth={1.5} />}
-                    endIcon={showPassword ? <EyeOff size={24} strokeWidth={1.5} /> : <Eye size={24} strokeWidth={1.5} />}
+                    startIcon={
+                        <span className="material-symbols-outlined text-2xl text-[#4c739a] dark:text-slate-400">
+                            lock
+                        </span>
+                    }
+                    endIcon={
+                        <span className="material-symbols-outlined">
+                            {showPassword ? 'visibility_off' : 'visibility'}
+                        </span>
+                    }
                     onEndIconClick={() => setShowPassword(!showPassword)}
                 />
-            </div>
-
-            <div className="mt-6 w-full">
-                <p className="text-center text-sm font-normal leading-normal text-[#4c739a] dark:text-slate-400">
-                    <a href="#" className="underline hover:text-primary dark:hover:text-primary/90">
-                        Forgot Password?
-                    </a>
-                </p>
             </div>
 
             <div className="mt-8 w-full">
@@ -86,6 +87,14 @@ const LoginForm = () => {
                     </div>
                 )}
                 <LoginActions status={status} isValid={isValid} />
+            </div>
+
+            <div className="mt-6 w-full">
+                <p className="text-center text-sm font-normal leading-normal text-[#4c739a] dark:text-slate-400">
+                    <a href="#" className="underline hover:text-primary dark:hover:text-primary/90">
+                        Forgot Password?
+                    </a>
+                </p>
             </div>
         </form>
     );
